@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTune - Hava Durumuna Göre Müzik Önerici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="weather-icon" id="weatherIcon">
+            <div class="loading-dots" id="loadingDots" style="display: none;">
+                <div></div><div></div><div></div><div></div>
+            </div>
+            <div id="weatherIconContent">🌤️</div>
+        </div>
+        <div class="weather-info" id="weatherInfo">
+            <div id="loadingText">Konum alınıyor...</div>
+        </div>
+        <div class="music-recommendation" id="musicRecommendation">
+            <div id="musicLoadingText">Müzik önerin hazırlanıyor...</div>
+        </div>
+        <div class="detailed-weather" id="detailedWeather" style="display: none;">
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-icon">💧</span>
+                    <span class="detail-text" id="humidity">Nem: Yükleniyor...</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🌬️</span>
+                    <span class="detail-text" id="wind">Rüzgar: Yükleniyor...</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">👁️</span>
+                    <span class="detail-text" id="visibility">Görüş: Yükleniyor...</span>
+                </div>
+            </div>
+        </div>
+        <div class="voice-controls">
+            <button class="voice-button" id="voiceButton" title="Sesli komut için tıklayın" aria-label="Sesli komutları başlat">
+                🎤
+            </button>
+            <div class="voice-status" id="voiceStatus" style="display: none;">
+                <span class="voice-text" id="voiceText">Dinleniyor...</span>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
